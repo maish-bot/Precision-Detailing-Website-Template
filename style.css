@@ -6,7 +6,7 @@ html[data-theme="coral"] {
 }
 
 :root {
-  --font-family: 'Inter', -apple-system, BlinkMaxSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --container-width: 1200px;
 }
@@ -898,9 +898,6 @@ ul {
   color: var(--accent-color);
 }
 
-/* FOOTER */
-
-
 /* FORM TERMS NOTICE */
 .form-terms {
   font-size: 0.825rem;
@@ -1025,7 +1022,6 @@ ul {
   }
 }
 
-
 /* MODAL POPUPS */
 .modal {
   position: fixed;
@@ -1088,11 +1084,172 @@ ul {
   color: var(--accent-color);
 }
 
-/* RESPONSIVE */
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS & MOBILE EFFICIENCY
+   ========================================================================== */
 @media (max-width: 992px) {
-  .hero-title { font-size: 2.8rem; }
-  .package-grid, .features-grid, .trust-grid, .photo-grid, .addons-grid { grid-template-columns: 1fr; }
-  .nav-links, .nav-cta { display: none; }
-  .ba-slider-container { height: 320px; }
-  .zip-checker { flex-direction: column; }
+  .hero-title { 
+    font-size: 2.8rem; 
+  }
+  
+  .package-grid, 
+  .features-grid, 
+  .trust-grid, 
+  .photo-grid, 
+  .addons-grid { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .nav-links, 
+  .nav-cta { 
+    display: none; 
+  }
+  
+  .ba-slider-container { 
+    height: 340px; 
+  }
+  
+  .zip-checker { 
+    flex-direction: column; 
+  }
+}
+
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll bleed & boost render efficiency */
+  html, body {
+    overflow-x: hidden;
+    touch-action: manipulation;
+  }
+
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* Section Padding Optimization */
+  .hero,
+  .packages,
+  .gallery-section,
+  .why-us,
+  .testimonials-section,
+  .faq-section,
+  .coverage-section,
+  .contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  /* Header & Controls Alignment */
+  .header {
+    padding: 10px 0;
+  }
+
+  .header-controls {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+
+  .theme-select {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+
+  .mode-toggle-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* Typography Scale for Mobile Screen Sizes */
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.925rem;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+  /* Grid Stack Alignment Fixes */
+  .trust-item {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .card-price {
+    font-size: 2.25rem;
+  }
+
+  /* Gallery & Slider Optimization */
+  .ba-slider-container {
+    height: 260px;
+    border-radius: 8px;
+  }
+
+  .photo-card {
+    height: 220px;
+  }
+
+  /* Form & Interactive Elements Alignment */
+  .booking-wrapper {
+    padding: 24px 16px;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .addon-card {
+    padding: 14px 12px;
+  }
+
+  .price-summary-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    padding: 16px;
+  }
+
+  .price-summary-amount {
+    font-size: 1.75rem;
+  }
+
+  /* Modals Optimization for Mobile */
+  .modal-content {
+    width: 92%;
+    padding: 24px 18px;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
 }

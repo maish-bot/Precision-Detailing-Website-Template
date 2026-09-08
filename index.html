@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="dark" data-theme="coral">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRECISION DETAILING | Mobile Car Detailing & Valeting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       1. STICKY HEADER & NAVBAR
+       Edit logo text or navigation links below
+       ========================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">PRECISION<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#packages">Packages</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#booking">Contact</a>
+      </nav>
+
+      <!-- THEME & COLOR CONTROLS -->
+      <div class="header-controls">
+        <select id="accent-select" class="theme-select" aria-label="Color Accent Selector">
+          <option value="coral">🔥 Electric Coral</option>
+          <option value="neon-lime">⚡ Neon Lime</option>
+          <option value="electric-blue">🔵 Electric Blue</option>
+        </select>
+
+        <button id="mode-toggle" class="mode-toggle-btn" aria-label="Toggle Light/Dark Mode">
+          <span id="mode-icon">🌙</span>
+        </button>
+
+        <a href="#booking" class="btn btn-primary nav-cta">Book Service</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       2. HERO SECTION
+       Edit main headline and call-to-actions
+       ========================================== -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">Fully Equipped Mobile Unit</div>
+      <h1 class="hero-title">Premium Car Detailing <span>At Your Doorstep</span></h1>
+      <p class="hero-subtext">Experience showroom perfection without leaving home or office. Professional steam extraction, high-gloss paint correction, and ceramic protection.</p>
+      <div class="hero-cta">
+        <a href="#packages" class="btn btn-primary">View Packages</a>
+        <a href="tel:07000000000" class="btn btn-outline">Call Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST & SOCIAL PROOF BADGES BAND -->
+  <section class="trust-band">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <span class="trust-icon">⭐</span>
+        <div>
+          <strong class="trust-title">5.0 Star Rating</strong>
+          <p class="trust-desc">Over 350+ 5-star reviews</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🛡️</span>
+        <div>
+          <strong class="trust-title">Insured & Bonded</strong>
+          <p class="trust-desc">£2M public liability policy</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🚗</span>
+        <div>
+          <strong class="trust-title">500+ Vehicles</strong>
+          <p class="trust-desc">Detailed & ceramic coated</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">⚡</span>
+        <div>
+          <strong class="trust-title">Mobile-Ready Unit</strong>
+          <p class="trust-desc">Self-contained power & water</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. PRICING PACKAGES GRID
+       Edit package titles, features, and £ prices
+       ========================================== -->
+  <section id="packages" class="packages">
+    <div class="container">
+      <h2 class="section-title">Detailing Packages</h2>
+      <p class="section-subtitle">Transparent pricing designed for vehicles of all shapes and sizes. We bring electricity and purified water.</p>
+
+      <div class="package-grid">
+        <!-- Package 1 -->
+        <div class="card glossy-card">
+          <div>
+            <h3 class="card-title">Mini Valet</h3>
+            <div class="card-price">£89 <span>/ session</span></div>
+            <ul class="card-features">
+              <li>Hand Foam Wash & Blow Dry</li>
+              <li>Alloy Wheels & Tires Dressed</li>
+              <li>Interior Vacuum & Wipe Down</li>
+              <li>Streak-Free Glass Polish</li>
+              <li>Air Freshener Application</li>
+            </ul>
+          </div>
+          <a href="#booking" class="btn btn-outline" onclick="selectBasePackage('mini-valet', 89)">Select Package</a>
+        </div>
+
+        <!-- Package 2 (Featured) -->
+        <div class="card glossy-card featured">
+          <span class="badge">Most Popular</span>
+          <div>
+            <h3 class="card-title">Full Detail</h3>
+            <div class="card-price">£189 <span>/ session</span></div>
+            <ul class="card-features">
+              <li>Includes Mini Valet Features</li>
+              <li>Deep Interior Steam Cleaning</li>
+              <li>Leather Conditioning / Fabric Shampoo</li>
+              <li>Engine Bay Clean & Dressing</li>
+              <li>High-Gloss Spray Sealant (3-Mo)</li>
+            </ul>
+          </div>
+          <a href="#booking" class="btn btn-primary" onclick="selectBasePackage('full-detail', 189)">Select Package</a>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="card glossy-card">
+          <div>
+            <h3 class="card-title">Paint Correction & Ceramic</h3>
+            <div class="card-price">£499 <span>/ starting</span></div>
+            <ul class="card-features">
+              <li>Includes Full Detail Features</li>
+              <li>Iron Decontamination & Clay Bar</li>
+              <li>Single-Stage Machine Paint Polish</li>
+              <li>Swirl Mark & Minor Scratch Removal</li>
+              <li>2-Year Professional Ceramic Coating</li>
+            </ul>
+          </div>
+          <a href="#booking" class="btn btn-outline" onclick="selectBasePackage('ceramic-coating', 499)">Select Package</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. BEFORE/AFTER SLIDER & GALLERY SECTION
+       Edit Unsplash image links below
+       ========================================== -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <h2 class="section-title">Visual Transformations</h2>
+      <p class="section-subtitle">Drag the slider below to inspect split-screen results, or view our transformation gallery.</p>
+
+      <!-- INTERACTIVE BEFORE/AFTER SLIDER (FIXED RELIABLE URLS) -->
+      <div class="ba-slider-container glossy-card">
+        <div class="ba-image-wrapper">
+          <!-- Dirty Car Image (Before) -->
+          <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1000&q=80" alt="Dirty Vehicle Before Detail" class="ba-img ba-before">
+          
+          <!-- Clean Car Image (After) -->
+          <div class="ba-after-wrapper">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1000&q=80" alt="Clean Glossy Vehicle After Detail" class="ba-img ba-after">
+          </div>
+          
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <input type="range" min="0" max="100" value="50" class="ba-range-input" id="ba-range-slider" aria-label="Before/After Slider">
+          <div class="ba-handle" id="ba-handle"></div>
+        </div>
+      </div>
+
+      <!-- PHOTO GRID WITH HOVER-ZOOM -->
+      <div class="photo-grid">
+        <div class="photo-card glossy-card">
+          <div class="photo-wrapper">
+            <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=600&q=80" alt="Paint Correction">
+          </div>
+          <div class="photo-overlay">
+            <h4>Paint Polish & Correction</h4>
+            <p>Swirl removal & mirror glass finish</p>
+          </div>
+        </div>
+
+        <div class="photo-card glossy-card">
+          <div class="photo-wrapper">
+            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" alt="Interior Steam Extraction">
+          </div>
+          <div class="photo-overlay">
+            <h4>Deep Steam Extraction</h4>
+            <p>Leather reconditioning & stain removal</p>
+          </div>
+        </div>
+
+        <div class="photo-card glossy-card">
+          <div class="photo-wrapper">
+            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="Ceramic Coating Gloss">
+          </div>
+          <div class="photo-overlay">
+            <h4>Ceramic Protection</h4>
+            <p>Hydrophobic 2-year ceramic coating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US SECTION -->
+  <section id="why-us" class="why-us">
+    <div class="container">
+      <h2 class="section-title">Why Choose Precision</h2>
+      <p class="section-subtitle">We treat every vehicle as if it were our own, utilizing cutting-edge tools and premium products.</p>
+
+      <div class="features-grid">
+        <div class="feature-card glossy-card">
+          <div class="feature-icon">🚚</div>
+          <h3 class="feature-title">We Come To You</h3>
+          <p class="feature-desc">Our self-contained vans carry onboard power and filtered water to deliver seamless detailing right at your driveway.</p>
+        </div>
+
+        <div class="feature-card glossy-card">
+          <div class="feature-icon">🌿</div>
+          <h3 class="feature-title">Eco-Friendly Products</h3>
+          <p class="feature-desc">We use biodegradable, pH-neutral chemicals and waterless washing techniques to protect both your vehicle and the environment.</p>
+        </div>
+
+        <div class="feature-card glossy-card">
+          <div class="feature-icon">🛡️</div>
+          <h3 class="feature-title">100% Satisfaction</h3>
+          <p class="feature-desc">We perform a rigorous multi-point inspection before hand-off. If it isn't spotless, we fix it immediately guaranteed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title">Client Reviews</h2>
+      <p class="section-subtitle">See what our satisfied car owners have to say about our mobile services.</p>
+
+      <div class="testimonial-slider glossy-card">
+        <div class="testimonial-slide active">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Precision came directly to my office complex and turned my swirl-covered BMW into a showroom piece. Unbelievable attention to detail!"</p>
+          <div class="testimonial-author">
+            <strong>David R.</strong>
+            <span>Verified Owner • 2022 BMW M4</span>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Extremely convenient service. They brought their own water and electricity. The leather restoration made the interior smell and feel brand new."</p>
+          <div class="testimonial-author">
+            <strong>Sarah M.</strong>
+            <span>Verified Owner • Porsche Macan GTS</span>
+          </div>
+        </div>
+
+        <div class="testimonial-controls">
+          <button id="prev-test" class="slider-btn" aria-label="Previous Review">❮</button>
+          <button id="next-test" class="slider-btn" aria-label="Next Review">❯</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Everything you need to know about our mobile unit setup and policies.</p>
+
+      <div class="faq-wrapper">
+        <div class="faq-item glossy-card">
+          <button class="faq-question">Do I need to provide power or water access? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>No! Our vans are completely self-contained with high-grade generators and onboard purified water tanks.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glossy-card">
+          <button class="faq-question">What is your rain & reschedule policy? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>If heavy rain or inclement weather is forecast, we can work inside your garage, set up our mobile marquee, or reschedule free of charge with at least 24 hours' notice.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glossy-card">
+          <button class="faq-question">What is your deposit & cancellation policy? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>Bookings can be rescheduled or canceled free of charge up to 24 hours before your scheduled appointment. Cancellations made within 24 hours may forfeit the booking deposit.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glossy-card">
+          <button class="faq-question">How long does a Full Detail service take? <span class="faq-icon">+</span></button>
+          <div class="faq-answer">
+            <p>A standard Full Detail takes roughly 2.5 to 4 hours depending on vehicle size and initial condition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVERAGE CHECKER -->
+  <section class="coverage-section">
+    <div class="container">
+      <h2 class="section-title">Service Area Checker</h2>
+      <p class="section-subtitle">Check instantly if our mobile detailing units cover your postal code.</p>
+
+      <div class="coverage-box glossy-card">
+        <div class="zip-checker">
+          <input type="text" id="zip-input" class="form-control" placeholder="Enter Postcode (e.g. B1 1AA / WV1)">
+          <button id="zip-btn" class="btn btn-primary">Check Coverage</button>
+        </div>
+        <div id="zip-result" class="zip-result"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. CONTACT & BOOKING FORM
+       Connect your form handling tool (e.g., Formspree) to the action tag below
+       ========================================== -->
+  <section id="booking" class="contact">
+    <div class="container">
+      <h2 class="section-title">Book Your Service</h2>
+      <p class="section-subtitle">Select your service, choose add-ons, and calculate your instant estimated total.</p>
+
+      <div class="booking-wrapper glossy-card">
+        <!-- EDIT FORM ACTION ENDPOINT BELOW -->
+        <form class="booking-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Booking Request Received! We will call you shortly.');">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" class="form-control" placeholder="Jane Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" class="form-control" placeholder="07000 000000" required>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="carmodel">Car Make & Model</label>
+            <input type="text" id="carmodel" class="form-control" placeholder="e.g. 2023 Porsche 911 / BMW X5" required>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="service">Desired Base Package</label>
+            <select id="service" class="form-control" required>
+              <option value="89" selected>Mini Valet (£89)</option>
+              <option value="189">Full Detail (£189)</option>
+              <option value="499">Paint Correction & Ceramic Coating (£499+)</option>
+            </select>
+          </div>
+
+          <!-- INTERACTIVE ADD-ON CALCULATOR -->
+          <div class="form-group full-width">
+            <label>Optional Add-On Enhancements</label>
+            <div class="addons-grid">
+              <label class="addon-card">
+                <input type="checkbox" class="addon-checkbox" data-price="40">
+                <div class="addon-info">
+                  <strong>Pet Hair Removal</strong>
+                  <span>+£40</span>
+                </div>
+              </label>
+
+              <label class="addon-card">
+                <input type="checkbox" class="addon-checkbox" data-price="60">
+                <div class="addon-info">
+                  <strong>Headlight Restoration</strong>
+                  <span>+£60</span>
+                </div>
+              </label>
+
+              <label class="addon-card">
+                <input type="checkbox" class="addon-checkbox" data-price="90">
+                <div class="addon-info">
+                  <strong>Engine Bay Steam Clean</strong>
+                  <span>+£90</span>
+                </div>
+              </label>
+
+              <label class="addon-card">
+                <input type="checkbox" class="addon-checkbox" data-price="120">
+                <div class="addon-info">
+                  <strong>Ceramic Windscreen Guard</strong>
+                  <span>+£120</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+         
+          <!-- ESTIMATED PRICE DISPLAY -->
+          <div class="form-group full-width price-summary-box">
+            <div class="price-summary-label">Estimated Total Price:</div>
+            <div id="calc-total" class="price-summary-amount">£89</div>
+          </div>
+
+          <div class="form-group full-width" style="margin-top: 10px;">
+            <p class="form-terms">By submitting this request, you agree to our <a href="#" id="open-terms-link">Service Terms</a> and 24-hour cancellation policy.</p>
+            <button type="submit" class="btn btn-primary">Confirm Booking Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 6. FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- COLUMN 1: NAVIGATION -->
+        <div class="footer-col">
+          <h4 class="footer-heading">NAVIGATION</h4>
+          <ul class="footer-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 2: SERVICES & FAQ -->
+        <div class="footer-col">
+          <h4 class="footer-heading">SERVICES & FAQ</h4>
+          <ul class="footer-list">
+            <li><a href="#packages">Mini Valet</a></li>
+            <li><a href="#packages">Full Detail</a></li>
+            <li><a href="#packages">Paint Correction</a></li>
+            <li><a href="#faq">Rain & Reschedule Policy</a></li>
+            <li><a href="#faq">Deposit Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 3: CONNECT / SOCIAL -->
+        <div class="footer-col">
+          <h4 class="footer-heading">CONNECT</h4>
+          <ul class="footer-list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="tel:07000000000">Call Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BOTTOM ROW: COPYRIGHT, LEGAL LINKS & LARGE BRAND LOGO -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p class="copyright">&copy; 2026 PRECISION DETAILING</p>
+          <div class="footer-legal-inline">
+            <a href="#" id="open-terms">Terms of Service</a>
+            <a href="#" id="open-privacy">Privacy Policy</a>
+          </div>
+        </div>
+        <div class="footer-brand-large">
+          PRECISION<span>.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TERMS MODAL -->
+  <div id="terms-modal" class="modal">
+    <div class="modal-content glossy-card">
+      <button class="modal-close" id="close-terms">&times;</button>
+      <h3>Terms & Conditions</h3>
+      <p>Welcome to Precision Detailing. By booking a service with us, you agree to the following terms:</p>
+      <ul>
+        <li><strong>Service Access:</strong> We require adequate space around the vehicle to safely operate our mobile equipment.</li>
+        <li><strong>Cancellations:</strong> Please provide at least 24 hours' notice for cancellations or reschedules.</li>
+        <li><strong>Valuables:</strong> Please remove all personal belongings from the vehicle prior to our arrival.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PRIVACY MODAL -->
+  <div id="privacy-modal" class="modal">
+    <div class="modal-content glossy-card">
+      <button class="modal-close" id="close-privacy">&times;</button>
+      <h3>Privacy Policy</h3>
+      <p>We value your privacy. Information collected through our booking form (such as your name, phone number, and vehicle details) is used solely to provide and confirm your detailing services.</p>
+      <p>We never sell or share your personal data with third parties.</p>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const htmlEl = document.documentElement;
+
+      // 1. Accent Color Switcher
+      const accentSelect = document.getElementById('accent-select');
+      accentSelect.addEventListener('change', (e) => {
+        htmlEl.setAttribute('data-theme', e.target.value);
+      });
+
+      // 2. Dark/Light Mode Toggle
+      const modeToggleBtn = document.getElementById('mode-toggle');
+      const modeIcon = document.getElementById('mode-icon');
+
+      modeToggleBtn.addEventListener('click', () => {
+        const currentMode = htmlEl.getAttribute('data-mode');
+        const newMode = currentMode === 'dark' ? 'light' : 'dark';
+        
+        htmlEl.setAttribute('data-mode', newMode);
+        modeIcon.textContent = newMode === 'light' ? '☀️' : '🌙';
+      });
+
+      // 3. Before/After Image Slider Logic
+      const slider = document.getElementById('ba-range-slider');
+      const afterWrapper = document.querySelector('.ba-after-wrapper');
+      const handle = document.getElementById('ba-handle');
+
+      if (slider && afterWrapper && handle) {
+        slider.addEventListener('input', (e) => {
+          const val = e.target.value;
+          afterWrapper.style.width = `${val}%`;
+          handle.style.left = `${val}%`;
+        });
+      }
+
+      // 4. Testimonials Slider Logic
+      const slides = document.querySelectorAll('.testimonial-slide');
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+      }
+
+      document.getElementById('next-test')?.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      document.getElementById('prev-test')?.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      // 5. FAQ Accordion Logic
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.parentElement;
+          item.classList.toggle('active');
+          const icon = btn.querySelector('.faq-icon');
+          if (icon) icon.textContent = item.classList.contains('active') ? '−' : '+';
+        });
+      });
+
+      // 6. Service Area Postal Code Checker
+      const zipBtn = document.getElementById('zip-btn');
+      const zipInput = document.getElementById('zip-input');
+      const zipResult = document.getElementById('zip-result');
+
+      zipBtn?.addEventListener('click', () => {
+        const val = zipInput.value.trim();
+        if (!val) {
+          zipResult.innerHTML = '<span style="color: #ff4757;">Please enter a postcode.</span>';
+          return;
+        }
+        zipResult.innerHTML = `<span style="color: var(--accent-color);">✓ Good news! ${val.toUpperCase()} is inside our primary mobile coverage area.</span>`;
+      });
+
+      // 7. Interactive Add-On Price Calculator (£ FIX)
+      const baseSelect = document.getElementById('service');
+      const addonCheckboxes = document.querySelectorAll('.addon-checkbox');
+      const totalDisplay = document.getElementById('calc-total');
+
+      function calculateTotal() {
+        let total = parseInt(baseSelect.value, 10) || 0;
+        addonCheckboxes.forEach(cb => {
+          if (cb.checked) {
+            total += parseInt(cb.getAttribute('data-price'), 10) || 0;
+          }
+        });
+        totalDisplay.textContent = `£${total}`;
+      }
+
+      baseSelect?.addEventListener('change', calculateTotal);
+      addonCheckboxes.forEach(cb => cb.addEventListener('change', calculateTotal));
+      calculateTotal();
+    });
+
+    function selectBasePackage(val, price) {
+      const select = document.getElementById('service');
+      if (select) {
+        select.value = price;
+        select.dispatchEvent(new Event('change'));
+      }
+    }
+
+// 8. Modal Popups Logic
+      const termsModal = document.getElementById('terms-modal');
+      const privacyModal = document.getElementById('privacy-modal');
+      
+      const openTermsBtns = [document.getElementById('open-terms'), document.getElementById('open-terms-link')];
+      const openPrivacyBtn = document.getElementById('open-privacy');
+      
+      const closeTermsBtn = document.getElementById('close-terms');
+      const closePrivacyBtn = document.getElementById('close-privacy');
+
+      openTermsBtns.forEach(btn => {
+        btn?.addEventListener('click', (e) => {
+          e.preventDefault();
+          termsModal.classList.add('active');
+        });
+      });
+
+      openPrivacyBtn?.addEventListener('click', (e) => {
+        e.preventDefault();
+        privacyModal.classList.add('active');
+      });
+
+      closeTermsBtn?.addEventListener('click', () => termsModal.classList.remove('active'));
+      closePrivacyBtn?.addEventListener('click', () => privacyModal.classList.remove('active'));
+
+      window.addEventListener('click', (e) => {
+        if (e.target === termsModal) termsModal.classList.remove('active');
+        if (e.target === privacyModal) privacyModal.classList.remove('active');
+      });
+  </script>
+</body>
+</html>
